@@ -1,14 +1,16 @@
-
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
+import { Price } from "./Price";
 
 interface SpecialOfTheDayProps {
-  title: string;
-  description: string;
-  price: string;
+  translationKey: string;
   imageUrl: string;
 }
 
-export const SpecialOfTheDay = ({ title, description, price, imageUrl }: SpecialOfTheDayProps) => {
+export const SpecialOfTheDay = ({ translationKey, imageUrl }: SpecialOfTheDayProps) => {
+  const { t, i18n } = useTranslation();
+  const isRTL = i18n.language === 'ar';
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -19,17 +21,24 @@ export const SpecialOfTheDay = ({ title, description, price, imageUrl }: Special
         <div className="relative h-64 w-full md:h-96 md:w-1/2">
           <img
             src={imageUrl}
-            alt={title}
+            alt={t(`dishes.${translationKey}.name`)}
             className="h-full w-full object-cover"
           />
         </div>
         <div className="flex flex-1 flex-col justify-center p-8">
           <span className="mb-2 inline-block rounded-full border border-restaurant-gold px-3 py-1 text-sm font-medium text-restaurant-gold">
-            Spécialité du jour
+            {t('special.title')}
           </span>
-          <h2 className="mb-4 text-3xl font-bold text-restaurant-gold">{title}</h2>
-          <p className="mb-6 text-restaurant-light">{description}</p>
-          <span className="text-2xl font-semibold text-restaurant-light">{price}</span>
+          <h2 className={`mb-4 text-3xl font-bold text-restaurant-gold ${isRTL ? 'text-right' : 'text-left'}`}>
+            {t(`dishes.${translationKey}.name`)}
+          </h2>
+          <p className={`mb-6 text-restaurant-light ${isRTL ? 'text-right' : 'text-left'}`}>
+            {t(`dishes.${translationKey}.description`)}
+          </p>
+          <Price 
+            translationKey={translationKey}
+            className={`text-2xl font-semibold text-restaurant-light ${isRTL ? 'text-right' : 'text-left'}`}
+          />
         </div>
       </div>
     </motion.div>

@@ -1,0 +1,50 @@
+{
+  "restaurant": {
+    "name": "Dar-Dhiafa",
+    "subtitle": "Discover our Authentic Oriental Cuisine"
+  },
+  "categories": {
+    "starters": "Appetizers",
+    "mains": "Main Courses",
+    "desserts": "Desserts"
+  },
+  "dishes": {
+    "mechouia": {
+      "name": "Slata Mechouia",
+      "description": "Traditional grilled vegetable salad with roasted peppers, tomatoes, and garlic",
+      "details": "Served with boiled eggs, premium tuna, and Kalamata olives"
+    },
+    "brik": {
+      "name": "Traditional Egg Brik",
+      "description": "Crispy malsouka pastry filled with egg and fresh parsley",
+      "details": "Served with lemon wedges and homemade harissa sauce"
+    },
+    "couscous": {
+      "name": "Seafood Couscous",
+      "description": "Fine couscous with fresh seafood and seasonal vegetables",
+      "details": "Prepared with daily catch and traditional tfaya sauce"
+    },
+    "ojja": {
+      "name": "Merguez Ojja",
+      "description": "Spicy tomato stew with poached eggs and authentic merguez sausage",
+      "details": "Served in a traditional clay tagine"
+    },
+    "zriga": {
+      "name": "Zriga",
+      "description": "Traditional sorghum milk cream delicately flavored with rose water",
+      "details": "Garnished with premium nuts and local honey"
+    },
+    "kaak": {
+      "name": "Kaak Warka",
+      "description": "Delicate almond-filled pastry rings",
+      "details": "Crafted following an authentic Tunisian recipe"
+    }
+  },
+  "actions": {
+    "viewMore": "Show details",
+    "viewLess": "Hide details"
+  },
+  "special": {
+    "title": "Today's Special"
+  }
+} 

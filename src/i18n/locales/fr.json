@@ -1,0 +1,86 @@
+{
+  "restaurant": {
+    "name": "Dar-Dhiafa",
+    "subtitle": "Découvrez notre authentique cuisine orientale"
+  },
+  "categories": {
+    "starters": "Entrées",
+    "mains": "Plats Principaux",
+    "desserts": "Desserts"
+  },
+  "dishes": {
+    "mechouia": {
+      "name": "Slata Mechouia",
+      "description": "Salade de légumes grillés avec poivrons, tomates et ail",
+      "details": "Servie avec des œufs durs, du thon et des olives noires de qualité"
+    },
+    "brik": {
+      "name": "Brik à l'Œuf",
+      "description": "Fine pâte malsouka croustillante garnie d'œuf et de persil frais",
+      "details": "Servie avec citron frais et harissa maison"
+    },
+    "couscous": {
+      "name": "Couscous aux Fruits de Mer",
+      "description": "Couscous fin aux fruits de mer et légumes de saison",
+      "details": "Préparé avec la pêche du jour et sa sauce tfaya traditionnelle"
+    },
+    "ojja": {
+      "name": "Ojja aux Merguez",
+      "description": "Œufs pochés dans une sauce tomate épicée avec merguez authentiques",
+      "details": "Servie dans un tajine en terre cuite traditionnel"
+    },
+    "zriga": {
+      "name": "Zriga",
+      "description": "Crème de sorgho au lait délicatement parfumée à l'eau de rose",
+      "details": "Garnie de fruits secs sélectionnés et de miel artisanal"
+    },
+    "kaak": {
+      "name": "Kaak Warka",
+      "description": "Délicats anneaux de pâtisserie fourrés aux amandes",
+      "details": "Élaborés selon la recette traditionnelle tunisienne"
+    },
+    "mechoui": {
+      "name": "Méchoui d'Agneau",
+      "description": "Épaule d'agneau marinée aux épices traditionnelles (cumin, coriandre, ail), cuite lentement au four jusqu'à ce que la viande soit fondante",
+      "details": "Servie avec son jus parfumé, accompagnée de pommes de terre au four et de légumes grillés"
+    }
+  },
+  "actions": {
+    "viewMore": "Voir les détails",
+    "viewLess": "Masquer les détails"
+  },
+  "special": {
+    "title": "Spécialité du jour"
+  },
+  "currency": {
+    "symbol": "€",
+    "position": "after"
+  },
+  "prices": {
+    "mechoui": "28",
+    "mechouia": "8",
+    "brik": "6",
+    "couscous": "24",
+    "ojja": "16",
+    "zriga": "5",
+    "kaak": "4"
+  },
+  "contact": {
+    "address": {
+      "title": "Adresse",
+      "street": "15 Rue de la Kasbah",
+      "city": "Tunis 1006",
+      "country": "Tunisie"
+    },
+    "phone": {
+      "title": "Téléphone",
+      "number": "+216 71 123 456"
+    },
+    "hours": {
+      "title": "Horaires d'ouverture",
+      "weekdays": "Lundi - Vendredi: 12h00 - 23h00",
+      "weekends": "Samedi - Dimanche: 12h00 - 00h00",
+      "ramadan": "Horaires spéciaux pendant le Ramadan"
+    }
+  }
+} 
