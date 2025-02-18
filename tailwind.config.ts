@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -26,11 +25,11 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         restaurant: {
-          terracotta: "#E07A5F",
-          cream: "#F2F1E8",
-          ochre: "#CA8A04",
-          brown: "#854D27",
-          sage: "#8A9A5B",
+          gold: "#D4AF37",
+          cream: "#F5E6CA",
+          dark: "#1A1F2C",
+          accent: "#B8860B",
+          light: "#E5D3B3",
         },
         primary: {
           DEFAULT: "hsl(var(--primary))",

@@ -56,15 +56,20 @@ const menuData = {
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-white px-4 py-8">
+    <div className="min-h-screen bg-restaurant-dark px-4 py-8">
       <div className="mx-auto max-w-7xl">
         <header className="mb-16 text-center">
-          <h1 className="mb-4 text-4xl font-bold text-restaurant-brown">
+          <div className="mx-auto mb-6 w-32 border-b-2 border-restaurant-gold" />
+          <h1 className="mb-4 font-serif text-5xl font-bold text-restaurant-gold">
             Dar-Dhiafa
           </h1>
-          <p className="text-lg text-gray-600">
-            Découvrez nos spécialités orientales
-          </p>
+          <div className="relative">
+            <div className="mx-auto mb-6 w-48 border-b-2 border-restaurant-gold" />
+            <p className="text-lg text-restaurant-light">
+              Découvrez nos spécialités orientales
+            </p>
+            <div className="mx-auto mt-6 w-32 border-b-2 border-restaurant-gold" />
+          </div>
         </header>
 
         <SpecialOfTheDay
