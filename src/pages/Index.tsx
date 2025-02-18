@@ -60,7 +60,7 @@ const Index = () => {
       <div className="mx-auto max-w-7xl">
         <header className="mb-16 text-center">
           <h1 className="mb-4 text-4xl font-bold text-restaurant-brown">
-            Restaurant Oriental
+            Dar-Dhiafa
           </h1>
           <p className="text-lg text-gray-600">
             Découvrez nos spécialités orientales
