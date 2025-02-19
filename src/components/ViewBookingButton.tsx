@@ -20,6 +20,7 @@ export const ViewBookingButton = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeBooking, setActiveBooking] = useState<Booking | null>(null);
   const [hasNotification, setHasNotification] = useState(false);
+  const [timeInfo, setTimeInfo] = useState<string>('');
 
   useEffect(() => {
     const booking = localStorage.getItem('activeBooking');
@@ -27,14 +28,20 @@ export const ViewBookingButton = () => {
       const parsedBooking = JSON.parse(booking);
       setActiveBooking(parsedBooking);
       
-      // Vérifier si la réservation est pour aujourd'hui
+      // Vérifier si c'est aujourd'hui
       const bookingDate = new Date(parsedBooking.date);
       const today = new Date();
+      
       if (bookingDate.toDateString() === today.toDateString()) {
-        setHasNotification(true);
+        setTimeInfo(t('booking.today'));
+        // Calculer les heures restantes
+        const hours = Math.round((bookingDate.getTime() - today.getTime()) / (1000 * 60 * 60));
+        if (hours > 0) {
+          setTimeInfo(t('booking.timeRemaining', { hours }));
+        }
       }
     }
-  }, []);
+  }, [t]);
 
   const getLocale = () => {
     switch (i18n.language) {
@@ -75,6 +82,9 @@ export const ViewBookingButton = () => {
       >
         <FaCalendarCheck className="h-5 w-5" />
         <span className="hidden md:inline">{t('booking.viewButton')}</span>
+        {timeInfo && (
+          <span className="text-sm font-medium">{timeInfo}</span>
+        )}
         {hasNotification && (
           <motion.div
             initial={{ scale: 0 }}

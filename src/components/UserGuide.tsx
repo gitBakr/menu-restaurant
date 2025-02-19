@@ -8,6 +8,7 @@ export const UserGuide = () => {
   const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const [neverShowAgain, setNeverShowAgain] = useState(false);
+  const [hasSeenGuide, setHasSeenGuide] = useState(false);
 
   // Observer pour détecter quand l'utilisateur arrive à la section réservation
   useEffect(() => {
@@ -49,12 +50,39 @@ export const UserGuide = () => {
   const handleClose = () => {
     setIsOpen(false);
     localStorage.setItem('hasSeenGuide', 'true');
+    setHasSeenGuide(true);
+    
+    // Scroll vers la section réservation
+    document.querySelector('#reservation')?.scrollIntoView({ 
+      behavior: 'smooth',
+      block: 'start'
+    });
   };
 
   const handleNeverShow = () => {
     setNeverShowAgain(true);
     setIsOpen(false);
     localStorage.setItem('neverShowGuide', 'true');
+  };
+
+  const handleButtonClick = () => {
+    if (hasSeenGuide || localStorage.getItem('hasSeenGuide')) {
+      // Si le guide a déjà été vu, aller directement à la réservation
+      const reservationSection = document.querySelector('#reservation');
+      if (reservationSection) {
+        const offset = 100; // Ajout d'un offset pour meilleure visibilité
+        const elementPosition = reservationSection.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - offset;
+        
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
+    } else {
+      // Sinon, montrer d'abord le guide
+      setIsOpen(true);
+    }
   };
 
   const steps = [
@@ -67,13 +95,13 @@ export const UserGuide = () => {
 
   return (
     <>
-      <button
-        onClick={() => setIsOpen(true)}
+      <motion.button
+        onClick={handleButtonClick}
         className="fixed bottom-4 right-4 z-40 rounded-full bg-restaurant-gold p-3 text-restaurant-dark shadow-lg hover:bg-restaurant-gold/80"
-        aria-label={t('guide.help')}
+        aria-label={hasSeenGuide ? t('reservation.title') : t('guide.help')}
       >
         <FaUtensils className="h-6 w-6" />
-      </button>
+      </motion.button>
 
       <AnimatePresence>
         {isOpen && (

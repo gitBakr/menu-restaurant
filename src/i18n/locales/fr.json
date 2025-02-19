@@ -193,11 +193,14 @@
     "activeBooking": "Votre réservation",
     "noActiveBooking": "Aucune réservation active",
     "details": "Réservation pour {{guests}} personnes le {{date}} à {{time}}",
-    "reference": "Référence",
+    "reference": "Référence de réservation",
     "preOrder": "Votre pré-commande",
     "cancel": "Annuler la réservation",
     "confirmCancel": "Êtes-vous sûr de vouloir annuler votre réservation ?",
     "resendConfirmation": "Renvoyer la confirmation",
-    "confirmationResent": "Un email de confirmation a été renvoyé"
+    "confirmationResent": "Un email de confirmation a été renvoyé",
+    "today": "C'est aujourd'hui !",
+    "timeRemaining": "Dans {{hours}} heures",
+    "instructions": "Présentez votre QR code à l'accueil"
   }
 } 

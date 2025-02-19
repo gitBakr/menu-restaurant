@@ -107,6 +107,7 @@
     "phone": "Phone",
     "specialRequests": "Special requests",
     "submit": "Book now",
+    "cta": "Book a table",
     "errors": {
       "dateRequired": "Date is required",
       "futureDateRequired": "Date must be in the future",
@@ -164,5 +165,20 @@
         "description": "A complete summary of your reservation"
       }
     }
+  },
+  "booking": {
+    "viewButton": "View my booking",
+    "activeBooking": "Your booking",
+    "noActiveBooking": "No active booking",
+    "details": "Booking for {{guests}} guests on {{date}} at {{time}}",
+    "reference": "Booking reference",
+    "preOrder": "Your pre-order",
+    "cancel": "Cancel booking",
+    "confirmCancel": "Are you sure you want to cancel your booking?",
+    "resendConfirmation": "Resend confirmation",
+    "confirmationResent": "Confirmation email has been resent",
+    "today": "It's today!",
+    "timeRemaining": "In {{hours}} hours",
+    "instructions": "Present your QR code at the reception"
   }
 } 

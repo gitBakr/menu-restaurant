@@ -5,7 +5,6 @@ import { useTranslation } from "react-i18next";
 import { ContactInfo } from "@/components/ContactInfo";
 import { Footer } from "@/components/Footer";
 import { ReservationCalendar } from "@/components/ReservationCalendar";
-import { ReservationButton } from "@/components/ReservationButton";
 import { UserGuide } from '@/components/UserGuide';
 import { ViewBookingButton } from '@/components/ViewBookingButton';
 
@@ -129,11 +128,6 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-restaurant-dark px-4 py-8">
       <ViewBookingButton />
-      {/* Floating button for mobile */}
-      <ReservationButton 
-        isFloating 
-        onClick={scrollToReservation}
-      />
 
       <div className="mx-auto max-w-7xl">
         {/* Déplacer les boutons de langue dans un conteneur fixe en haut à droite */}
@@ -191,20 +185,10 @@ const Index = () => {
           </div>
         </header>
 
-        {/* Desktop button after header */}
-        <div className="hidden md:flex justify-center mt-8">
-          <ReservationButton onClick={scrollToReservation} />
-        </div>
-
         <SpecialOfTheDay
           translationKey="mechoui"
           imageUrl="/dishes/agneau.jpg"
         />
-
-        {/* Desktop button after special */}
-        <div className="hidden md:flex justify-center mt-8">
-          <ReservationButton onClick={scrollToReservation} />
-        </div>
 
         <div className="rounded-xl bg-restaurant-darker p-8 shadow-xl">
           <div className="mb-12 text-center">

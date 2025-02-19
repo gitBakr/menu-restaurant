@@ -183,5 +183,20 @@
         "description": "ملخص كامل لحجزك"
       }
     }
+  },
+  "booking": {
+    "viewButton": "عرض حجزي",
+    "activeBooking": "حجزك الحالي",
+    "noActiveBooking": "لا يوجد حجز نشط",
+    "details": "حجز لـ {{guests}} أشخاص يوم {{date}} على الساعة {{time}}",
+    "reference": "رقم الحجز",
+    "preOrder": "طلبك المسبق",
+    "cancel": "إلغاء الحجز",
+    "confirmCancel": "هل أنت متأكد من إلغاء حجزك؟",
+    "resendConfirmation": "إعادة إرسال التأكيد",
+    "confirmationResent": "تم إعادة إرسال رسالة التأكيد",
+    "today": "اليوم!",
+    "timeRemaining": "في غضون {{hours}} ساعات",
+    "instructions": "قدم رمز QR عند الوصول"
   }
 } 
