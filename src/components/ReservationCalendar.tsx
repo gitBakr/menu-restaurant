@@ -66,20 +66,30 @@ export const ReservationCalendar = () => {
   const filterTimes = (time: Date) => {
     const hours = time.getHours();
     const minutes = time.getMinutes();
-    const selectedDay = reservationData?.date || new Date();
+    const selectedDay = new Date(time);
 
-    if (isMonday(selectedDay)) return false;
+    // Fermé le lundi
+    if (isMonday(selectedDay)) {
+      return false;
+    }
+
+    // Dimanche : 12h00-15h00 uniquement
     if (isSunday(selectedDay)) {
-      return hours >= 12 && hours < 15;
+      return (hours >= 12 && hours < 15);
     }
 
     // Mardi à Samedi
+    // Déjeuner : 12h00-14h30
+    // Dîner : 19h00-22h30
     return (
-      (hours === 12 && minutes <= 30) ||
-      (hours > 12 && hours < 14) ||
-      (hours === 14 && minutes <= 30) ||
-      (hours >= 19 && hours < 22) ||
-      (hours === 22 && minutes <= 30)
+      // Service du déjeuner
+      (hours === 12) || // 12h00-12h59
+      (hours === 13) || // 13h00-13h59
+      (hours === 14 && minutes <= 30) || // 14h00-14h30
+      
+      // Service du dîner
+      (hours >= 19 && hours < 22) || // 19h00-21h59
+      (hours === 22 && minutes <= 30) // 22h00-22h30
     );
   };
 

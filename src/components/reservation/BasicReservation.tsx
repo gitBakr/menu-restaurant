@@ -7,6 +7,7 @@ import { ReservationType } from '../../types/reservation';
 import "react-datepicker/dist/react-datepicker.css";
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import { isSunday, isMonday } from 'date-fns';
 
 // Enregistrer les locales
 registerLocale('fr', fr);
@@ -23,6 +24,36 @@ export const BasicReservation = ({ onSubmit, formikRef }: BasicReservationProps)
   const isRTL = i18n.language === 'ar';
   const [showPreOrderOptions, setShowPreOrderOptions] = useState(false);
   const [formValues, setFormValues] = useState<ReservationType | null>(null);
+
+  const filterTimes = (time: Date) => {
+    const hours = time.getHours();
+    const minutes = time.getMinutes();
+    const selectedDay = new Date(time);
+
+    // Fermé le lundi
+    if (isMonday(selectedDay)) {
+      return false;
+    }
+
+    // Dimanche : 12h00-15h00 uniquement
+    if (isSunday(selectedDay)) {
+      return (hours >= 12 && hours < 15);
+    }
+
+    // Mardi à Samedi
+    // Déjeuner : 12h00-14h30
+    // Dîner : 19h00-22h30
+    return (
+      // Service du déjeuner
+      (hours === 12) || // 12h00-12h59
+      (hours === 13) || // 13h00-13h59
+      (hours === 14 && minutes <= 30) || // 14h00-14h30
+      
+      // Service du dîner
+      (hours >= 19 && hours < 22) || // 19h00-21h59
+      (hours === 22 && minutes <= 30) // 22h00-22h30
+    );
+  };
 
   const handleSubmit = (values: ReservationType) => {
     setFormValues(values);
@@ -56,7 +87,7 @@ export const BasicReservation = ({ onSubmit, formikRef }: BasicReservationProps)
         })}
         onSubmit={handleSubmit}
       >
-        {({ setFieldValue, values }) => (
+        {({ values, setFieldValue }) => (
           <Form className={`space-y-6 ${isRTL ? 'text-right' : 'text-left'}`}>
             <div className="grid gap-6 md:grid-cols-2">
               <div>
@@ -78,20 +109,25 @@ export const BasicReservation = ({ onSubmit, formikRef }: BasicReservationProps)
                 />
               </div>
 
-              <div>
+              <div className="space-y-2">
                 <label className="block text-restaurant-gold mb-2">
                   {t('reservation.time')}
                 </label>
                 <ReactDatePicker
                   selected={values.time}
-                  onChange={(time: Date) => setFieldValue('time', time)}
+                  onChange={(time) => setFieldValue('time', time)}
                   showTimeSelect
                   showTimeSelectOnly
                   timeIntervals={30}
+                  timeCaption={t('reservation.time')}
                   dateFormat="HH:mm"
-                  timeFormat="HH:mm"
-                  locale={i18n.language as 'fr' | 'en' | 'ar'}
-                  className="w-full p-2 rounded bg-restaurant-dark text-restaurant-light border border-restaurant-gold/30 focus:border-restaurant-gold"
+                  filterTime={filterTimes}
+                  className="w-full rounded-lg bg-restaurant-dark p-3 text-restaurant-light border border-restaurant-gold/30 focus:border-restaurant-gold"
+                  popperPlacement="bottom"
+                  popperProps={{
+                    strategy: "fixed"
+                  }}
+                  portalId="root"
                 />
                 <ErrorMessage
                   name="time"

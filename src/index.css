@@ -99,3 +99,29 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Styles pour le sélecteur d'heure sur mobile */
+.react-datepicker__time-container {
+  width: 100% !important;
+  max-width: none !important;
+}
+
+.react-datepicker__time-box {
+  width: 100% !important;
+  max-width: none !important;
+}
+
+.react-datepicker__time-list {
+  height: 200px !important;
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+}
+
+/* Améliorer la taille des éléments pour le tactile */
+.react-datepicker__time-list-item {
+  padding: 1rem !important;
+  font-size: 1rem !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
