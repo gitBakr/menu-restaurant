@@ -110,6 +110,7 @@ const menuData = {
 };
 
 const Index = () => {
+  const [expandedDishes, setExpandedDishes] = useState<number[]>([]);
   const { t, i18n } = useTranslation();
   const [showReservation, setShowReservation] = useState(false);
 
@@ -122,6 +123,14 @@ const Index = () => {
   const handleLanguageChange = (lang: string) => {
     i18n.changeLanguage(lang);
     localStorage.setItem('languageChanged', 'true');
+  };
+
+  const toggleDishDetails = (dishId: number) => {
+    setExpandedDishes(prev => 
+      prev.includes(dishId) 
+        ? prev.filter(id => id !== dishId) 
+        : [...prev, dishId]
+    );
   };
 
   return (
@@ -218,12 +227,24 @@ const Index = () => {
                           {t('currency.position') === 'after' ? t('currency.symbol') : ''}
                         </span>
                       </div>
-                      <p className="mt-2 text-restaurant-light">
-                        {t(`dishes.${dish.translationKey}.description`)}
-                      </p>
-                      <p className="mt-1 text-sm italic text-restaurant-gold/70">
-                        {t(`dishes.${dish.translationKey}.details`)}
-                      </p>
+                      <button
+                        className="mt-2 text-sm text-restaurant-gold/80 hover:text-restaurant-gold transition-colors"
+                        onClick={() => toggleDishDetails(dish.id)}
+                      >
+                        {expandedDishes.includes(dish.id) 
+                          ? t('actions.viewLess') 
+                          : t('actions.viewMore')}
+                      </button>
+                      {expandedDishes.includes(dish.id) && (
+                        <div className="mt-2 space-y-2">
+                          <p className="text-restaurant-light">
+                            {t(`dishes.${dish.translationKey}.description`)}
+                          </p>
+                          <p className="text-sm italic text-restaurant-gold/70">
+                            {t(`dishes.${dish.translationKey}.details`)}
+                          </p>
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -259,9 +280,24 @@ const Index = () => {
                           {t('currency.position') === 'after' ? t('currency.symbol') : ''}
                         </span>
                       </div>
-                      <p className="mt-2 text-restaurant-light">
-                        {t(`dishes.${dish.translationKey}.description`)}
-                      </p>
+                      <button
+                        className="mt-2 text-sm text-restaurant-gold/80 hover:text-restaurant-gold transition-colors"
+                        onClick={() => toggleDishDetails(dish.id)}
+                      >
+                        {expandedDishes.includes(dish.id) 
+                          ? t('actions.viewLess') 
+                          : t('actions.viewMore')}
+                      </button>
+                      {expandedDishes.includes(dish.id) && (
+                        <div className="mt-2 space-y-2">
+                          <p className="text-restaurant-light">
+                            {t(`dishes.${dish.translationKey}.description`)}
+                          </p>
+                          <p className="text-sm italic text-restaurant-gold/70">
+                            {t(`dishes.${dish.translationKey}.details`)}
+                          </p>
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -297,9 +333,24 @@ const Index = () => {
                           {t('currency.position') === 'after' ? t('currency.symbol') : ''}
                         </span>
                       </div>
-                      <p className="mt-2 text-restaurant-light">
-                        {t(`dishes.${dish.translationKey}.description`)}
-                      </p>
+                      <button
+                        className="mt-2 text-sm text-restaurant-gold/80 hover:text-restaurant-gold transition-colors"
+                        onClick={() => toggleDishDetails(dish.id)}
+                      >
+                        {expandedDishes.includes(dish.id) 
+                          ? t('actions.viewLess') 
+                          : t('actions.viewMore')}
+                      </button>
+                      {expandedDishes.includes(dish.id) && (
+                        <div className="mt-2 space-y-2">
+                          <p className="text-restaurant-light">
+                            {t(`dishes.${dish.translationKey}.description`)}
+                          </p>
+                          <p className="text-sm italic text-restaurant-gold/70">
+                            {t(`dishes.${dish.translationKey}.details`)}
+                          </p>
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>
