@@ -180,5 +180,7 @@
     "today": "It's today!",
     "timeRemaining": "In {{hours}} hours",
     "instructions": "Present your QR code at the reception"
+  },
+  "menu": {
   }
 } 

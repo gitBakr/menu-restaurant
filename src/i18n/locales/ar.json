@@ -198,5 +198,7 @@
     "today": "اليوم!",
     "timeRemaining": "في غضون {{hours}} ساعات",
     "instructions": "قدم رمز QR عند الوصول"
+  },
+  "menu": {
   }
 } 
