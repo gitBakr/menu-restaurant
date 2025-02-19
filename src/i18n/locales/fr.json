@@ -202,5 +202,8 @@
     "today": "C'est aujourd'hui !",
     "timeRemaining": "Dans {{hours}} heures",
     "instructions": "Présentez votre QR code à l'accueil"
+  },
+  "menu": {
+    "orderButton": "Commander"
   }
 } 
