@@ -82,5 +82,106 @@
       "weekends": "السبت - الأحد: 12:00 - 00:00",
       "ramadan": "أوقات خاصة خلال شهر رمضان"
     }
+  },
+  "footer": {
+    "social": {
+      "title": "تابعونا",
+      "facebook": "فيسبوك",
+      "instagram": "انستغرام",
+      "tripadvisor": "تريب أدفايزر"
+    },
+    "copyright": "© 2024 دار الضيافة. جميع الحقوق محفوظة.",
+    "links": {
+      "reservations": "الحجوزات",
+      "privacy": "سياسة الخصوصية",
+      "terms": "شروط الاستخدام"
+    }
+  },
+  "reservation": {
+    "cta": "احجز طاولة",
+    "confirmation": "تم حجز طاولة لـ {{guests}} أشخاص يوم {{date}} الساعة {{time}}",
+    "preOrder": {
+      "info": "هل تريد الطلب المسبق لأطباقك؟",
+      "optional": "يمكنك الطلب في المطعم",
+      "recommendation": "يوصى بالطلب المسبق للمجموعات",
+      "title": "طلب مسبق",
+      "summary": "ملخص طلبك المسبق",
+      "total": "المجموع"
+    },
+    "basicOnly": "حجز فقط",
+    "withPreOrder": "حجز مع طلب مسبق",
+    "back": "رجوع",
+    "skipPreOrder": "تخطي هذه الخطوة",
+    "orderLater": "الطلب في المطعم",
+    "confirmPreOrder": "تأكيد الطلب المسبق",
+    "title": "حجز طاولة",
+    "date": "التاريخ",
+    "time": "الوقت",
+    "guests": "عدد الضيوف",
+    "name": "الاسم الكامل",
+    "email": "البريد الإلكتروني",
+    "phone": "الهاتف",
+    "specialRequests": "طلبات خاصة",
+    "submit": "تأكيد الحجز",
+    "errors": {
+      "dateRequired": "التاريخ مطلوب",
+      "futureDateRequired": "يجب أن يكون التاريخ في المستقبل",
+      "timeRequired": "الوقت مطلوب",
+      "guestsRequired": "عدد الضيوف مطلوب",
+      "minGuests": "الحد الأدنى شخص واحد",
+      "maxGuests": "الحد الأقصى 8 أشخاص",
+      "nameRequired": "الاسم مطلوب",
+      "emailRequired": "البريد الإلكتروني مطلوب",
+      "invalidEmail": "بريد إلكتروني غير صالح",
+      "phoneRequired": "رقم الهاتف مطلوب"
+    }
+  },
+  "dev": {
+    "testMode": "وضع الاختبار"
+  },
+  "confirmation": {
+    "title": "تم تأكيد الحجز!",
+    "greeting": "نراك قريباً {{name}}!",
+    "details": "تم حجز طاولتك لـ {{guests}} أشخاص يوم {{date}} الساعة {{time}}",
+    "addToCalendar": "إضافة إلى التقويم",
+    "shareWhatsApp": "مشاركة عبر واتساب",
+    "practicalInfo": "معلومات عملية",
+    "close": "إغلاق",
+    "calendarEvent": "حجز في {{restaurant}}",
+    "calendarDescription": "حجز لـ {{guests}} أشخاص\nرقم الحجز: {{reservationId}}",
+    "shareMessage": "لقد حجزت طاولة لـ {{guests}} أشخاص في مطعم {{restaurant}} يوم {{date}} الساعة {{time}}. هل تود الانضمام؟",
+    "viewPreOrder": "عرض طلبي المسبق",
+    "preOrder": {
+      "title": "طلبك المسبق",
+      "total": "المجموع"
+    }
+  },
+  "guide": {
+    "title": "كيف يعمل؟",
+    "help": "مساعدة",
+    "gotIt": "فهمت",
+    "neverShow": "عدم الإظهار مرة أخرى",
+    "steps": {
+      "language": {
+        "title": "اختر لغتك",
+        "description": "حدد لغتك المفضلة من بين الفرنسية والإنجليزية والعربية"
+      },
+      "menu": {
+        "title": "تصفح قائمتنا",
+        "description": "اكتشف تخصصاتنا وأطباق اليوم"
+      },
+      "datetime": {
+        "title": "حدد التاريخ والوقت",
+        "description": "اختر الوقت المناسب لك"
+      },
+      "booking": {
+        "title": "احجز مع أو بدون طلب مسبق",
+        "description": "خيار الطلب المسبق لأطباقك لمزيد من الراحة"
+      },
+      "confirmation": {
+        "title": "احصل على تأكيدك",
+        "description": "ملخص كامل لحجزك"
+      }
+    }
   }
 } 

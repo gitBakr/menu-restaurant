@@ -82,5 +82,122 @@
       "weekends": "Samedi - Dimanche: 12h00 - 00h00",
       "ramadan": "Horaires spéciaux pendant le Ramadan"
     }
+  },
+  "footer": {
+    "social": {
+      "title": "Suivez-nous",
+      "facebook": "Facebook",
+      "instagram": "Instagram",
+      "tripadvisor": "TripAdvisor"
+    },
+    "copyright": "© 2024 Dar-Dhiafa. Tous droits réservés.",
+    "links": {
+      "reservations": "Réservations",
+      "privacy": "Politique de confidentialité",
+      "terms": "Conditions d'utilisation"
+    }
+  },
+  "reservation": {
+    "title": "Réserver une table",
+    "date": "Date",
+    "time": "Heure",
+    "guests": "Nombre de personnes",
+    "name": "Nom complet",
+    "email": "Email",
+    "phone": "Téléphone",
+    "specialRequests": "Demandes spéciales",
+    "submit": "Réserver",
+    "errors": {
+      "dateRequired": "La date est requise",
+      "futureDateRequired": "La date doit être dans le futur",
+      "timeRequired": "L'heure est requise",
+      "guestsRequired": "Le nombre de personnes est requis",
+      "minGuests": "Minimum 1 personne",
+      "maxGuests": "Maximum 8 personnes",
+      "nameRequired": "Le nom est requis",
+      "emailRequired": "L'email est requis",
+      "invalidEmail": "Email invalide",
+      "phoneRequired": "Le téléphone est requis"
+    },
+    "cta": "Réserver une table",
+    "confirmation": "Votre réservation pour {{guests}} personnes est prévue le {{date}} à {{time}}",
+    "dateFormat": {
+      "weekdays": "lundi_mardi_mercredi_jeudi_vendredi_samedi_dimanche",
+      "months": "janvier_février_mars_avril_mai_juin_juillet_août_septembre_octobre_novembre_décembre"
+    },
+    "basicOnly": "Réserver uniquement",
+    "withPreOrder": "Réserver et pré-commander",
+    "preOrder": {
+      "info": "Souhaitez-vous pré-commander vos plats ?",
+      "optional": "Vous pourrez commander sur place",
+      "recommendation": "La pré-commande est recommandée pour les groupes",
+      "title": "Pré-commande",
+      "summary": "Récapitulatif de votre pré-commande",
+      "total": "Total"
+    },
+    "back": "Retour",
+    "skipPreOrder": "Passer cette étape",
+    "orderLater": "Commander sur place",
+    "confirmPreOrder": "Confirmer la pré-commande"
+  },
+  "dev": {
+    "testMode": "Mode Test"
+  },
+  "confirmation": {
+    "title": "Réservation confirmée !",
+    "greeting": "À bientôt {{name}} !",
+    "details": "Votre table pour {{guests}} personnes est réservée pour le {{date}} à {{time}}",
+    "addToCalendar": "Ajouter au calendrier",
+    "shareWhatsApp": "Partager sur WhatsApp",
+    "practicalInfo": "Informations pratiques",
+    "close": "Fermer",
+    "calendarEvent": "Réservation {{restaurant}}",
+    "calendarDescription": "Réservation pour {{guests}} personnes\nNuméro de réservation : {{reservationId}}",
+    "shareMessage": "J'ai réservé une table pour {{guests}} personnes au restaurant {{restaurant}} le {{date}} à {{time}}. Tu te joins à moi ?",
+    "viewPreOrder": "Voir ma pré-commande",
+    "preOrder": {
+      "title": "Votre pré-commande",
+      "total": "Total"
+    }
+  },
+  "guide": {
+    "title": "Comment ça marche ?",
+    "help": "Aide",
+    "gotIt": "J'ai compris",
+    "neverShow": "Ne plus afficher",
+    "steps": {
+      "language": {
+        "title": "Choisissez votre langue",
+        "description": "Sélectionnez votre langue préférée parmi FR, EN ou AR"
+      },
+      "menu": {
+        "title": "Parcourez notre menu",
+        "description": "Découvrez nos spécialités et le menu du jour"
+      },
+      "datetime": {
+        "title": "Sélectionnez date et heure",
+        "description": "Choisissez le moment qui vous convient le mieux"
+      },
+      "booking": {
+        "title": "Réservez avec ou sans pré-commande",
+        "description": "Option de pré-commander vos plats pour plus de confort"
+      },
+      "confirmation": {
+        "title": "Recevez votre confirmation",
+        "description": "Un récapitulatif complet de votre réservation"
+      }
+    }
+  },
+  "booking": {
+    "viewButton": "Voir ma réservation",
+    "activeBooking": "Votre réservation",
+    "noActiveBooking": "Aucune réservation active",
+    "details": "Réservation pour {{guests}} personnes le {{date}} à {{time}}",
+    "reference": "Référence",
+    "preOrder": "Votre pré-commande",
+    "cancel": "Annuler la réservation",
+    "confirmCancel": "Êtes-vous sûr de vouloir annuler votre réservation ?",
+    "resendConfirmation": "Renvoyer la confirmation",
+    "confirmationResent": "Un email de confirmation a été renvoyé"
   }
 } 

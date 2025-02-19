@@ -38,6 +38,11 @@
       "name": "Kaak Warka",
       "description": "Delicate almond-filled pastry rings",
       "details": "Crafted following an authentic Tunisian recipe"
+    },
+    "mechoui": {
+      "name": "Lamb Mechoui",
+      "description": "Shoulder of lamb marinated in traditional spices (cumin, coriander, garlic), slow-roasted until tender",
+      "details": "Served with its aromatic jus, roasted potatoes and grilled vegetables"
     }
   },
   "actions": {
@@ -46,5 +51,118 @@
   },
   "special": {
     "title": "Today's Special"
+  },
+  "currency": {
+    "symbol": "$",
+    "position": "before"
+  },
+  "prices": {
+    "mechoui": "32",
+    "mechouia": "9",
+    "brik": "7",
+    "couscous": "28",
+    "ojja": "18",
+    "zriga": "6",
+    "kaak": "5"
+  },
+  "contact": {
+    "address": {
+      "title": "Address",
+      "street": "15 Kasbah Street",
+      "city": "Tunis 1006",
+      "country": "Tunisia"
+    },
+    "phone": {
+      "title": "Phone",
+      "number": "+216 71 123 456"
+    },
+    "hours": {
+      "title": "Opening Hours",
+      "weekdays": "Monday - Friday: 12:00 PM - 11:00 PM",
+      "weekends": "Saturday - Sunday: 12:00 PM - 12:00 AM",
+      "ramadan": "Special hours during Ramadan"
+    }
+  },
+  "footer": {
+    "social": {
+      "title": "Follow Us",
+      "facebook": "Facebook",
+      "instagram": "Instagram",
+      "tripadvisor": "TripAdvisor"
+    },
+    "copyright": "© 2024 Dar-Dhiafa. All rights reserved.",
+    "links": {
+      "reservations": "Reservations",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service"
+    }
+  },
+  "reservation": {
+    "title": "Book a Table",
+    "date": "Date",
+    "time": "Time",
+    "guests": "Number of guests",
+    "name": "Full name",
+    "email": "Email",
+    "phone": "Phone",
+    "specialRequests": "Special requests",
+    "submit": "Book now",
+    "errors": {
+      "dateRequired": "Date is required",
+      "futureDateRequired": "Date must be in the future",
+      "timeRequired": "Time is required",
+      "guestsRequired": "Number of guests is required",
+      "minGuests": "Minimum 1 guest",
+      "maxGuests": "Maximum 8 guests",
+      "nameRequired": "Name is required",
+      "emailRequired": "Email is required",
+      "invalidEmail": "Invalid email",
+      "phoneRequired": "Phone is required"
+    }
+  },
+  "confirmation": {
+    "title": "Booking confirmed!",
+    "greeting": "See you soon {{name}}!",
+    "details": "Your table for {{guests}} guests is booked for {{date}} at {{time}}",
+    "addToCalendar": "Add to Calendar",
+    "shareWhatsApp": "Share on WhatsApp",
+    "practicalInfo": "Practical Information",
+    "close": "Close",
+    "calendarEvent": "Reservation at {{restaurant}}",
+    "calendarDescription": "Reservation for {{guests}} guests\nReservation ID: {{reservationId}}",
+    "shareMessage": "I've booked a table for {{guests}} people at {{restaurant}} on {{date}} at {{time}}. Would you like to join?",
+    "viewPreOrder": "View my pre-order",
+    "preOrder": {
+      "title": "Your pre-order",
+      "total": "Total"
+    }
+  },
+  "guide": {
+    "title": "How it works?",
+    "help": "Help",
+    "gotIt": "Got it",
+    "neverShow": "Don't show again",
+    "steps": {
+      "language": {
+        "title": "Choose your language",
+        "description": "Select your preferred language from FR, EN or AR"
+      },
+      "menu": {
+        "title": "Browse our menu",
+        "description": "Discover our specialties and today's specials"
+      },
+      "datetime": {
+        "title": "Select date and time",
+        "description": "Choose the moment that suits you best"
+      },
+      "booking": {
+        "title": "Book with or without pre-order",
+        "description": "Option to pre-order your dishes for more convenience"
+      },
+      "confirmation": {
+        "title": "Get your confirmation",
+        "description": "A complete summary of your reservation"
+      }
+    }
   }
 } 
